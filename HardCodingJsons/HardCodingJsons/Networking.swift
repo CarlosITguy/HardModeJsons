@@ -47,7 +47,7 @@ extension NetworkManager {
         
         guard let damageTypes = base["damage_relations"] as? [String : Any] else {print("in damage types") ; return nil}
         var returnOfDamageTypes : [DamageType] = []
-        print(returnOfDamageTypes)
+//        print(returnOfDamageTypes)
         
         guard let dobDamFr = damageTypes["double_damage_from"] as? [[String : Any]] else {return nil }
         
@@ -104,7 +104,7 @@ extension NetworkManager {
         let alltypesofdamage = DamageType(dobleDamageFrom: DobDamTo, dobleDamageTo: DobDamTo, halfDamageFrom:HalfDamFr, halfDamageTo: HalfDamTo, noDamageFrom: NoDamFr, noDamageTo: NoDamTo)
         
         returnOfDamageTypes.append(alltypesofdamage)
-        print("Append damage types \(alltypesofdamage.dobleDamageFrom[0].name)")
+//        print("Append damage types \(alltypesofdamage.dobleDamageFrom[0].name)")
         
         
         guard let GamInd = base["game_indices"] as? [[String : Any]] else {return nil}
@@ -148,7 +148,7 @@ extension NetworkManager {
             }
             
             savemoves.append(move)
-            print("save moves name \(move.name)")
+//            print("save moves name \(move.name)")
         }
         //        let allmoves =
         guard let unicname  = base["name"] as? String else {return nil}
@@ -166,7 +166,7 @@ extension NetworkManager {
             let somthingelse = Poke(poke: pokemon, slot: slot)
             
             savePokes.append(somthingelse)
-            print("pokemons name \(savePokes)")
+//            print("pokemons name \(pokemon.name)")
         }
         
         

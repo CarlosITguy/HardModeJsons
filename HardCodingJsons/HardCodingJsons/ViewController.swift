@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         button.setTitle("Manual Decode", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemBlue
-        //        button.addTarget(self, action: #selector(self.manualDecodeButtonPressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.manualDecodeButtonPressed), for: .touchUpInside)
         
         return button
     }()
@@ -42,23 +42,69 @@ class ViewController: UIViewController {
         self.manualDecodeButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
         
     }
+    var counter : Int = 0
     @objc
     func manualDecodeButtonPressed()  {
-        //        var saveStrings : [String]
-        print("Manual Button Pressed")
+        //        var counter : Int = 0
+        counter = counter+1
         guard let pokemon = NetworkManager.shared.getPokemonManually() else {
             return
         }
-     
-        var indexes = pokemon.damageRelations.compactMap {
-                    return $0.dobleDamageTo
-                        }
-        print()
+        popUpAlert(pokemon:pokemon)
         
-//        var Namess = pokemon.gameIndices.compactMap {
-//            return $0.generation.name
+    }
+    
+    
+    func popUpAlert(pokemon : Pokemon){
+       
+        let Namess = pokemon.pokemon.compactMap {
+            return $0.poke.name
+                        }
+        print(Namess)
+        
+        let alert = UIAlertController(title: " pokenames", message: "\(Namess)", preferredStyle: .alert)
+               let okayAction = UIAlertAction(title: "Okay", style: .default)
+               alert.addAction(okayAction)
+       
+        self.present(alert, animated: true)
+        
+    }
+    
+   
+    
+}
+
+
+//var counter : Int = 0
+//@objc
+//func manualDecodeButtonPressed()  {
+////        var counter : Int = 0
+//    counter = counter+1
+//    guard let pokemon = NetworkManager.shared.getPokemonManually() else {
+//        return
+//    }
+//    popUpAlert(pokemon:pokemon)
+//
+//    //        var saveStrings : [String]
+//        print("Manual Button Pressed \(counter  )")
+//        guard let pokemon = NetworkManager.shared.getPokemonManually() else {
+//            return
+//        }
+//        var Namess = pokemon.pokemon.compactMap {
+//            return $0.poke.name
 //                        }
-//        print(Namess)
+////        print(Namess)
+//
+//        let alert = UIAlertController(title: " pkenames", message: "\(Namess)", preferredStyle: .alert)
+//               let okayAction = UIAlertAction(title: "Okay", style: .default)
+//               alert.addAction(okayAction)
+//
+//               self.present(alert, animated: true)
+   
+//}
+
+//            return $0.move.name    }
+
 //
 //        var urls = pokemon.gameIndices.compactMap {
 //            return $0.generation.url
@@ -98,29 +144,22 @@ class ViewController: UIViewController {
         //
         //
         ////        self.presentPokemonAlert(pokemon: pokemon)
-        
-    }
-    
-    
-    //            return $0.move.name    }
-    
-    //
-    //    func presentPokemonAlert(pokemon: Pokemon?) {
-    //        guard let pokemon = pokemon else { return }
-    //
-    //        let moveNames = pokemon.gameIndices.compactMap {
-    //            return $0.move.name
-    //        }
-    //
-    //        let alert = UIAlertController(title: "Glaceon Moves", message: "\(moveNames)", preferredStyle: .alert)
-    //        let okayAction = UIAlertAction(title: "Okay", style: .default)
-    //        alert.addAction(okayAction)
-    //
-    //        self.present(alert, animated: true)
-    //
-    //
-    //
-    //    }
-    
-    
-}
+        //
+
+
+//    func presentPokemonAlert(pokemon: Pokemon?) {
+//        guard let pokemon = pokemon else { return }
+//
+//        let moveNames = pokemon.gameIndices.compactMap {
+//            return $0.move.name
+//        }
+//
+//        let alert = UIAlertController(title: "Glaceon Moves", message: "\(moveNames)", preferredStyle: .alert)
+//        let okayAction = UIAlertAction(title: "Okay", style: .default)
+//        alert.addAction(okayAction)
+//
+//        self.present(alert, animated: true)
+//
+//
+//
+//    }
