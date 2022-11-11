@@ -9,10 +9,10 @@ struct Pokemon {
     let generation : NameUrl
     let id : Int
     let moveDamageClass: NameUrl
-    let moves : NameUrl
+    let moves : [NameUrl]
     let name : String
     let pokemon : [Poke]
-    
+//
 }
 
 struct DamageType {

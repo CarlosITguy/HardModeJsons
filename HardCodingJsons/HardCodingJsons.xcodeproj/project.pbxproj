@@ -15,7 +15,7 @@
 		0286876C291C3576001041D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0286876A291C3576001041D4 /* LaunchScreen.storyboard */; };
 		02868774291C3615001041D4 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02868773291C3615001041D4 /* Pokemon.swift */; };
 		02868776291C4000001041D4 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02868775291C4000001041D4 /* Networking.swift */; };
-		02868778291C4041001041D4 /* SampleJSONDragon.json in Resources */ = {isa = PBXBuildFile; fileRef = 02868777291C4041001041D4 /* SampleJSONDragon.json */; };
+		028687A4291D911F001041D4 /* SampleJSONDragon.json in Resources */ = {isa = PBXBuildFile; fileRef = 028687A3291D911F001041D4 /* SampleJSONDragon.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		0286876D291C3576001041D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02868773291C3615001041D4 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		02868775291C4000001041D4 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		02868777291C4041001041D4 /* SampleJSONDragon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SampleJSONDragon.json; path = ../../../../../Downloads/SampleJSONDragon.json; sourceTree = "<group>"; };
+		028687A3291D911F001041D4 /* SampleJSONDragon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleJSONDragon.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 				02868763291C3573001041D4 /* ViewController.swift */,
 				0286875F291C3573001041D4 /* AppDelegate.swift */,
 				02868761291C3573001041D4 /* SceneDelegate.swift */,
-				02868777291C4041001041D4 /* SampleJSONDragon.json */,
+				028687A3291D911F001041D4 /* SampleJSONDragon.json */,
 				02868765291C3573001041D4 /* Main.storyboard */,
 				02868768291C3576001041D4 /* Assets.xcassets */,
 				0286876A291C3576001041D4 /* LaunchScreen.storyboard */,
@@ -134,7 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02868778291C4041001041D4 /* SampleJSONDragon.json in Resources */,
+				028687A4291D911F001041D4 /* SampleJSONDragon.json in Resources */,
 				0286876C291C3576001041D4 /* LaunchScreen.storyboard in Resources */,
 				02868769291C3576001041D4 /* Assets.xcassets in Resources */,
 				02868767291C3573001041D4 /* Main.storyboard in Resources */,
